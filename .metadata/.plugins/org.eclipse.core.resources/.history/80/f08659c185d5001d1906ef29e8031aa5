@@ -1,0 +1,55 @@
+package poo;
+import java.util.*;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	/* Una clase abstracta es una clase que admite metodos abstractos, es decir, metodos que compartiran
+	 * todas las subclases, pero que estas deberan sobrescribir luego
+	 * */
+	abstract class Persona {
+		private String nombre;
+		
+		public Persona(String nombre) {
+			this.nombre = nombre;
+		}
+		
+		public String getNombre() {
+			return nombre;
+		}
+		
+		// Un metodo abstracto solo se construye, no se define, no lleva llaves
+		public abstract String getDescripcion();
+	}
+	
+	class Empleado2 {
+		private int id;
+		private static int idSiguiente = 1;
+		private double sueldo;
+		private Date fecha_alta;
+		
+		public Empleado2(double sueldo, int ano, int mes, int dia) {
+			this.sueldo = sueldo;
+			GregorianCalendar fecha = new GregorianCalendar(ano, mes-1, dia);
+			fecha_alta = fecha.getTime();
+			id = idSiguiente;
+			idSiguiente++;
+		}
+		
+		public double getSueldo() {
+			return sueldo;
+		}
+		
+		public Date getFechaContrato() {
+			return fecha_alta;
+		}
+		
+		public void subirSueldo(double porcentaje) {
+			sueldo += sueldo*porcentaje/100;
+		}
+	}
+
+}

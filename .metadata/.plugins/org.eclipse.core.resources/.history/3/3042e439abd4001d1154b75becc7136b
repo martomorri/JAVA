@@ -1,0 +1,49 @@
+
+public class EjercicioArraysBidimensionales {
+
+	public static void main(String[] args) {
+		double[][] capital_incrementado = new double[6][5];
+		int porcentaje = 10;
+		
+		inicializarMatriz(capital_incrementado);
+		calcularCapital(capital_incrementado, porcentaje);
+		mostrarPorPantalla(capital_incrementado, porcentaje);
+	}
+	
+	public static void inicializarMatriz(double[][] capital_incrementado) {
+		for (int i = 0; i < 6; i++) {
+			capital_incrementado[i][0] = 10000;
+		}
+	}
+	
+	public static void calcularCapital(double[][] capital_incrementado, int porcentaje) {
+		double acumulado = 10000;
+		
+		for (int i = 0; i < 6; i++) {
+			porcentaje = 10;
+			acumulado = 10000;
+			for (int n = 1; n < 5; n++) {
+				acumulado += acumulado*porcentaje/100;
+				capital_incrementado[i][n] = acumulado;
+				porcentaje++;
+			}
+		}
+	}
+	
+	public static void mostrarPorPantalla(double[][] capital_incrementado, int porcentaje) {
+		/*for (int i = 0; i < 6;  i++) {
+			System.out.print((porcentaje+i) + "%      ");
+		}*/
+		int i = 0;
+		for (double[] fila: capital_incrementado) {
+			System.out.println();
+			System.out.print((porcentaje+i) + "%: ");
+			for (double x : fila) {
+				System.out.printf("%1.2f", x);
+				System.out.print(" ");
+			}
+			i++;
+		}
+	}
+
+}

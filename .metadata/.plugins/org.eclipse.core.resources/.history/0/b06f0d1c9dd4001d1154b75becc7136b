@@ -1,0 +1,14 @@
+package cursojava;
+
+public class ArraysBidimensionales {
+
+	public static void main(String[] args) {
+		int[][] arrayBi = new int[4][5];
+		
+		//un ejemplo inicializando matriz
+		arrayBi[0][0] = 10;
+		
+		System.out.println(arrayBi[0][0]);
+	}
+
+}

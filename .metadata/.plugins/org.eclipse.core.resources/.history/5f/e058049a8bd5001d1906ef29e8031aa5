@@ -1,0 +1,11 @@
+package poo;
+
+public class Clase1 {
+	
+	int num1 = 5;
+	int num2 = 7;
+	String getNum2() {
+		return "El valor de num2 es " + num2;
+	}
+
+}

@@ -1,0 +1,29 @@
+package poo;
+
+public class Auto {
+	private int ruedas;
+	private int largo;
+	private int ancho;
+	private int motor;
+	private int peso_plataforma;
+	private String color;
+	private int cant_asientos;
+	private boolean aire_acondicionado;
+	private int peso_total;
+	
+	public Auto() {
+		ruedas = 4; largo = 2000; ancho = 300; motor = 1600; peso_plataforma = 500;
+	}
+	
+	public String getDatosPlataforma() {
+		return "Ruedas: " + ruedas + "\nLargo: " + largo/1000 + "m\nAncho: " + ancho + "cm\nMotor: " + motor + "cm3\nPeso de la plataforma: " + peso_plataforma + "kg";
+	}
+	
+	public void setColor(String color) {
+		this.color = color;
+	}
+	
+	public String getColor() {
+		return color;
+	}
+}

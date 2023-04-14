@@ -1,0 +1,33 @@
+package poo;
+
+public class Uso_Empleado {
+
+	public static void main(String[] args) {
+		Jefe jefe_rrhh = new Jefe("Martin", 30000, 2022, 9, 15);
+		jefe_rrhh.setIncentivo(5000);
+		Empleado[] empleados = new Empleado[4];
+		empleados[0] = new Empleado("Luciano", 25000, 2023, 2, 14);
+		empleados[1] = new Empleado("Benjamin", 41000, 2003, 8, 25);
+		empleados[2] = jefe_rrhh;	//Polimorfismo: principio de sustitucion: usamos un objeto de la subclase cuando se espere un objeto de la superclase
+		empleados[3] = new Jefe("Pepe", 27500, 1998, 4, 5);
+		
+		Jefe jefe_finanzas = (Jefe) empleados[3]; // Para castear o refundir el item 3 del array de empleados
+		jefe_finanzas.setIncentivo(100000);
+		
+		for (Empleado item: empleados) {
+			item.subirSueldo(5);
+		}
+		
+		for (Empleado item: empleados) {
+			System.out.print("Nombre: " + item.getNombre() + " ");
+			/* La variable item se comporta de una manera u otra dependiendo del contexto:
+			 * Si es empleado, utiliza el metodo getSueldo de la clase Empleado, mientras que si es jefe
+			 * utiliza el mismo metodo, pero de la clase Jefe
+			 * ¿Pero como se da cuenta Java de que metodo usar? Por el enlazado dinamico:
+			 * Java sabe automaticamente a que metodo de la clase padre o subclase debe llamar*/
+			System.out.print("Sueldo: " + item.getSueldo() + " ");
+			System.out.println("Sueldo: " + item.getFechaContrato());
+		}
+	}
+
+}

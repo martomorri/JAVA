@@ -1,0 +1,13 @@
+package poo;
+import javax.swing.*;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Auto renault = new Auto();
+		System.out.println(renault.getDatosPlataforma());
+		renault.setColor(JOptionPane.showInputDialog("Ingrese el color:"));
+		System.out.println("Color: " + renault.getColor());
+	}
+
+}

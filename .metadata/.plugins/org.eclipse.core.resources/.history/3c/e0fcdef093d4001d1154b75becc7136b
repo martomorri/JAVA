@@ -1,0 +1,15 @@
+package cursojava;
+import javax.swing.*;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		int num = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero: "));
+		int factorial = 1;
+		for (int i = num; i > 0; i--) {
+			factorial *= i;
+		}
+		System.out.println(factorial);
+	}
+
+}

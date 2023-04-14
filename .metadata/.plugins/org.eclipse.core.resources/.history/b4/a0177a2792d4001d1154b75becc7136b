@@ -1,0 +1,29 @@
+package cursojava;
+import java.util.*;
+
+public class Flujos {
+
+	public static void main(String[] args) {
+		Random num_random = new Random();
+		int random = num_random.nextInt(100);
+		System.out.println(random);
+		int intentos = 0;
+		//System.out.println(num_random.nextInt(100));
+		Scanner input = new Scanner(System.in);
+		int num = 0;
+		/*System.out.print("Ingrese un numero: ");
+		int num = input.nextInt();*/
+		do {
+			System.out.print("Ingrese un numero: ");
+			num = input.nextInt();
+			intentos++;
+			//System.out.print("Numero incorrecto.");
+			if (random > num) System.out.println("El numero es mas alto al que ingresaste.");
+			else if (random < num) System.out.println("El numero es mas bajo al que ingresaste.");
+			//System.out.print("Ingrese un numero: ");
+			//num = input.nextInt();
+		} while (num != random);
+		System.out.print("Adivinaste el numero. Tardaste " + intentos + " intentos");
+	}
+
+}

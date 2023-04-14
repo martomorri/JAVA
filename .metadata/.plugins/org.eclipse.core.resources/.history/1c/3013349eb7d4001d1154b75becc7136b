@@ -1,0 +1,12 @@
+package poo;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Auto renault = new Auto();
+		System.out.println("Ruedas: " + renault.getRuedas());
+		renault.setColor("Rojo");
+		System.out.println("Color: " + renault.getColor());
+	}
+
+}

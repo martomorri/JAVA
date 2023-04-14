@@ -1,0 +1,23 @@
+package graficas;
+
+import javax.swing.*;
+
+public class Marcos {
+
+	public static void main(String[] args) {
+		
+		Marco marco1 = new Marco();
+		marco1.setVisible(true);
+		marco1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+
+}
+
+class Marco extends JFrame {
+	
+	public Marco() {
+		setSize(1920,1080);
+	}
+	
+}

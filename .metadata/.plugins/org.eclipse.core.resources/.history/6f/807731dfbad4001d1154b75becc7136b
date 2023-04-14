@@ -1,0 +1,58 @@
+package poo;
+
+public class Auto {
+	private int ruedas;
+	private int largo;
+	private int ancho;
+	private int motor;
+	private int peso_plataforma;
+	private String color;
+	private int cant_asientos;
+	private boolean aire_acondicionado;
+	private int peso_total;
+	//private double precio;
+	
+	public Auto() {
+		ruedas = 4; largo = 2000; ancho = 300; motor = 1600; peso_plataforma = 500;
+	}
+	
+	public String getDatosPlataforma() {
+		return "Ruedas: " + ruedas + "\nLargo: " + largo/1000 + "m\nAncho: " + ancho + "cm\nMotor: " + motor + "cm3\nPeso de la plataforma: " + peso_plataforma + "kg";
+	}
+	
+	public void setColor(String color) {
+		this.color = color;
+	}
+	
+	public String getColor() {
+		return color;
+	}
+	
+	public void setCantAsientos(int cant_asientos) {
+		this.cant_asientos = cant_asientos;
+	}
+	
+	public int getCantAsientos() {
+		return cant_asientos;
+	}
+	
+	public void setAireAcondicionado(boolean aire_acondicionado) {
+		this.aire_acondicionado = aire_acondicionado;
+	}
+	
+	public boolean getAireAcondicionado() {
+		return aire_acondicionado;
+	}
+	
+	public void setPesoTotal() {
+		peso_total += peso_plataforma;
+		if (aire_acondicionado) peso_total += 20;
+		if (cant_asientos == 4) peso_total += 50;
+		else if (cant_asientos == 6) peso_total += 75;
+	}
+	
+	public int getPesoTotal() {
+		this.setPesoTotal();
+		return peso_total;
+	}
+}

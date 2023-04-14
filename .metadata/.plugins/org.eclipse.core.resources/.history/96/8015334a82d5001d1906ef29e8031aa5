@@ -1,0 +1,9 @@
+package poo;
+
+public class Director extends Jefe {
+	
+	public Director(String nombre, double sueldo, int ano, int mes, int dia) {
+		super(nombre, sueldo, ano, mes, dia);
+	}
+	
+}

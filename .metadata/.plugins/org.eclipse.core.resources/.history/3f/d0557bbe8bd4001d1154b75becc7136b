@@ -1,0 +1,17 @@
+package cursojava;
+import java.util.*;
+import javax.swing.*;
+
+public class Prueba {
+
+	public static void main(String[] args) {
+		/*Scanner input = new Scanner(System.in);
+		System.out.println("Ingrese su nombre:");
+		String nombre = input.nextLine();
+		System.out.println("Hola, " + nombre);*/
+		String nombre = JOptionPane.showInputDialog("Ingrese su nombre: ");
+		String edad = JOptionPane.showInputDialog("Ingrese su edad:");
+		System.out.println("Hola " + nombre + ". Tenes " + edad + " años");
+	}
+
+}

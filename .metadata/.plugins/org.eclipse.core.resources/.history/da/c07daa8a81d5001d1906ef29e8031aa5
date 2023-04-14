@@ -1,0 +1,21 @@
+package poo;
+
+/* Si hacemos que una clase sea "final" detenemos la cadena de herencia de la misma;
+ * por lo tanto, nadie puede ser una subclase de Jefe, en este caso
+ */
+public final class Jefe extends Empleado {
+	private double incentivo;
+	
+	public Jefe(String nombre, double sueldo, int ano, int mes, int dia) {
+		super(nombre, sueldo, ano, mes, dia);
+	}
+	
+	public void setIncentivo(double b) {
+		incentivo = b;
+	}
+	
+	public double getSueldo() {
+		// para sobreescribir un metodo padre
+		return super.getSueldo() + incentivo;
+	}
+}
